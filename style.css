@@ -1,0 +1,24 @@
+body {
+    background-color: white;
+}
+
+
+.background-image {
+    position: absolute;
+    height: auto;
+    left: 0;
+    z-index: -10;
+}
+
+.overlay-text {
+    position: absolute;
+}
+
+.flex-container {
+  
+}
+
+.title {
+    left: 20px;
+    border: 1px solid rgb(255, 0, 43);
+}
