@@ -6,27 +6,84 @@
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <link href="output.css" rel="stylesheet" type="text/css">
 </head>
-<body class="bg-imagegray">
+<body class="bg-softblack">
 
-    <div class="flex flex-row justify-center items-center h-60 border-2">
-        <div class="flex flex-row gap-14 m-10 text-center border-2">
-            <div class="w-[430px] bg-stonegray h-44">
-                <p class="text-softblack mt-12 text-7xl font-pixel">tokenomics</p>
+    <div id="home"></div>
+
+        <div class="flex flex-row justify-center gap-12 mx-48 mt-20 items-center">
+
+            <div class="min-w-[350px] h-32 bg-stonegray flex flex-row items-center justify-center rounded-md">
+                <a href="#tokenomics" class="text-softblack text-6xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer">tokenomics</a> 
             </div>
-            <div class="w-[430px] bg-stonegray h-44">
-                <p class="text-softblack mt-12 text-7xl font-pixel">lore</p>
+
+            <div class="min-w-[350px] h-32 bg-stonegray flex flex-row items-center justify-center rounded-md">
+                <a href="#lore" class="text-softblack text-7xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer">lore</a>
             </div>
-            <div class="w-[430px] bg-stonegray h-44">
-                <p class="text-softblack mt-12 text-7xl font-pixel">analytics</p>
+            <div class="min-w-[350px] h-32 bg-stonegray flex flex-row items-center justify-center rounded-md">
+                <a href="#analytics" class="text-softblack text-7xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer">analytics</a>
             </div>
-            <div class="w-[430px] bg-stonegray h-44">
-                <p class="text-softblack mt-12 text-7xl font-pixel">dex</p>
+
+        </div>
+
+        <div class="flex flex-row align-middle h-12 px-14 bg-stonegray mt-3 mx-[387px] rounded-md">
+            <div class="flex flex-row gap-6 items-center">
+                <a href="https://web.telegram.org/">
+                    <img src="assets/tele-app.png" class="h-10">
+                </a>
+                
+                <a href="https://twitter.com/home">
+                    <img src="assets/x-app.png" class="h-10">
+                </a>
+                
+                <a href="https://raydium.io/">
+                    <img src="assets/raydium-app.png" class="h-10"> 
+                </a>
+               
+                <h1 class="font-bold text-4xl text-softblack font-metropolis ml-36">
+                    WELCOME  &nbsp; TO  &nbsp; $BRONCO
+                </h1>
             </div>
         </div>
-    </div>
 
-    <img src="/assets/img1.png" class="absolute scale-75 h-screen pb-3">
+        <section class="block">
+            <div class="absolute top-0 h-screen w-screen z-[-10] overflow-hidden">
+               <video autoplay muted loop id="carChase" class="w-full">
+                <source src="assets/carchase.mp4" type="video/mp4">
+            </video> 
+            </div>
+            
+        </section>
 
-    
+        <section class="block" id="tokenomics">
+            <p class="text-white">
+                Tokenomics go here!
+            </p>
+            
+            <img src="assets/hodl.png" class="h-96">
+        </section>
+
+        <section class="block" id="lore">
+            <p class="text-white">
+                Lore goes here!
+            </p>
+            
+            <img src="assets/cryptocar.png" class="h-96">
+        </section>
+
+        <section class="block" id="analytics">
+            <p class="text-white">
+                Lore goes here!
+            </p>
+
+            <img src="assets/tothemoon.png" class="h-96">
+        </section>
+
+        <a href="#home" class="absolute">
+            <img src="assets/arrowup.png" class="h-12">
+        </a>
+        
+
+  
+<script src="script.js"></script>
 </body>
 </html>
