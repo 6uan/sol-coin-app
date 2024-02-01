@@ -10,41 +10,57 @@
 
     <div id="home"></div>
 
-        <div class="flex flex-row justify-center gap-12 mx-48 mt-20 items-center">
 
-            <div class="min-w-[350px] h-32 bg-stonegray flex flex-row items-center justify-center rounded-md">
-                <a href="#tokenomics" class="text-softblack text-6xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer">tokenomics</a> 
-            </div>
 
-            <div class="min-w-[350px] h-32 bg-stonegray flex flex-row items-center justify-center rounded-md">
-                <a href="#lore" class="text-softblack text-7xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer">lore</a>
-            </div>
-            <div class="min-w-[350px] h-32 bg-stonegray flex flex-row items-center justify-center rounded-md">
-                <a href="#analytics" class="text-softblack text-7xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer">analytics</a>
-            </div>
+    <!-- DIV CONTAINER -->
+    <div class="mx-auto px-10 lg:px-96 mt-20">
 
+
+    <!-- DIV 1 (tokenomics, lore, analytics)-->
+        <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-12 items-center">
+
+        <div class="w-full md:min-w-[350px] h-32 bg-stonegray flex items-center justify-center rounded-md">
+            <a href="#tokenomics" class="text-softblack text-4xl md:text-6xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer mx-2">tokenomics</a> 
         </div>
-
-        <div class="flex flex-row align-middle px-10 h-12 bg-stonegray mt-3 mx-[387px] rounded-md">
-            <div class="flex flex-row gap-9 items-center">
-                <a href="https://web.telegram.org/">
-                    <img src="assets/tele-app.png" class="h-10">
-                </a>
-                
-                <a href="https://twitter.com/home">
-                    <img src="assets/x-app.png" class="h-10">
-                </a>
-                
-                <a href="https://raydium.io/">
-                    <img src="assets/raydium-app.png" class="h-10"> 
-                </a>
-               
-                <h1 class="font-bold text-4xl text-softblack font-metropolis ml-14">
-                    $Bronco killing the meme game since 1994
-                </h1>
-
-            </div>
+    
+        <div class="w-full md:min-w-[350px] h-32 bg-stonegray flex items-center justify-center rounded-md">
+            <a href="#lore" class="text-softblack text-4xl md:text-7xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer mx-2">lore</a>
         </div>
+    
+        <div class="w-full md:min-w-[350px] h-32 bg-stonegray flex items-center justify-center rounded-md">
+            <a href="#analytics" class="text-softblack text-4xl md:text-7xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer mx-2">analytics</a>
+        </div>
+    
+        </div>
+    
+    <div class="flex flex-col md:flex-row items-center justify-center bg-stonegray mt-3 gap-4 md:gap-12 py-2">
+        <div class="flex flex-row gap-9 items-center justify-center">
+            <a href="https://web.telegram.org/">
+                <img src="assets/tele-app.png" class="h-10">
+            </a>
+            
+            <a href="https://twitter.com/home">
+                <img src="assets/x-app.png" class="h-10">
+            </a>
+            
+            <a href="https://raydium.io/">
+                <img src="assets/raydium-app.png" class="h-10"> 
+            </a>
+        </div>
+    
+        <!-- Full text for larger screens -->
+        <h1 class="hidden md:block font-bold text-4xl text-softblack font-metropolis ml-14">
+            $Bronco killing the meme game since 1994
+        </h1>
+    
+        <!-- Short text for smaller screens -->
+        <h1 class="block md:hidden font-bold text-2xl text-softblack font-metropolis text-center">
+            $Bronco
+        </h1>
+    </div>
+
+</div>
+    
 
         <section class="block">
             <div class="absolute top-0 h-screen w-screen z-[-10] overflow-hidden">
