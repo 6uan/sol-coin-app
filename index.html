@@ -6,20 +6,20 @@
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <link href="output.css" rel="stylesheet" type="text/css">
 </head>
-<body class="bg-stonegray">
+<body class="bg-da">
 
     <a id="home"></a>
 
-    <section class="relative border-2">
+    <section class="relative">
 
         <!-- container for both divs under -->
-        <div class="mx-auto px-10 xl:px-96 -mt-96">
+        <div class="mx-auto px-10 xl:px-32 -mt-96 overflow-hidden">
 
         <!-- DIV 1 (tokenomics, lore, analytics)-->
         <div class="flex flex-col mt-36 xl:flex-row justify-center gap-4 xl:gap-12 items-center">
 
             <!-- box for tokenomics -->
-            <div class="w-full xl:min-w-[350px] h-32 bg-stonegray flex items-center justify-center rounded-md">
+        <div class="w-full h-32 bg-stonegray flex items-center justify-center rounded-md">
             <a href="#tokenomics" class="text-softblack text-4xl xl:text-6xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer mx-2">tokenomics</a> 
             </div>
     
@@ -39,7 +39,7 @@
         <div class="flex flex-col xl:flex-row items-center justify-center bg-stonegray mt-3 gap-4 xl:gap-12 py-2 rounded-md">
 
             <!-- box for socials-->
-            <div class="flex flex-row gap-9 items-center justify-center">
+            <div class="flex flex-row gap-9 items-center justify-center min-w-64">
                 <a href="https://web.telegram.org/">
                     <img src="assets/tele-app.png" class="h-10">
                 </a>
@@ -54,7 +54,7 @@
             </div>
     
             <!-- Full text for larger screens -->
-            <h1 class="hidden xl:block font-bold text-4xl text-softblack font-metropolis ml-14">$Bronco killing the meme game since 1994</h1>
+            <h1 class="hidden xl:block font-bold text-4xl text-softblack font-metropolis min-w-96">$Bronco killing the meme game since 1994</h1>
     
             <!-- Short text for smaller screens -->
             <h1 class="block xl:hidden font-bold text-2xl text-softblack font-metropolis text-center">$Bronco</h1>
@@ -64,25 +64,35 @@
         <!-- video background -->
         <div class="absolute top-0 h-screen w-screen z-[-10] overflow-hidden">
             <video autoplay muted loop id="carChase" class="w-full h-full object-cover">
-            <source src="assets/carchase-compressed.mov" type="video/mp4">
+            <source src="assets/shortchase.mov" type="video/mp4">
             </video> 
         </div>
             
     </section>
 
-        <section class="flex border-2" id="tokenomics">
+        <section class="flex border-2 bg-softblack" id="tokenomics">
             <img src="assets/hodl.png" class="h-96">
             <p class="text-white">Tokenomics go here!</p>
         </section>
 
         <section class="flex border-2" id="lore">
-            <p class="text-white">Lore goes here!</p>
             <img src="assets/cryptocar.png" class="h-96">
+            <p class="text-darkblack text-sm text-center">🚨 Breaking News: O.J. Simpson Strikes Again! 🚨 <br>
+
+                Reports are pouring in that O.J. Simpson has made a surprising return to the spotlight, and this time, he's taking on the blockchain! But wait, it gets even wilder... he's making his getaway in none other than his infamous white Bronco! 🚗💨 <br>
+                
+                Witnesses claim they saw O.J. Simpson calmly sipping a smoothie while casually shutting down block after block of the blockchain. 😎 Turns out, he's not just an ex-football star; he's a crypto-savvy guru! Who knew? <br>
+                
+                As the crypto community scrambles to make sense of it all, one thing's for sure: O.J.'s white Bronco is the new symbol of decentralized escapades! 🕵️‍♂️💼 <br>  
+                
+                Stay tuned as this wild ride unfolds. Who knows what other surprises O.J. has up his sleeve? But hey, at least he's trading in his gloves for keyboard strokes! ⌨️ #BroncoBandit #CryptoChaos #OJOnTheRun <br></p> 
         </section>
 
         <section class="flex border-2" id="analytics">
             <img src="assets/tothemoon.png" class="h-96">
-            <p class="text-white">Lore goes here!</p> 
+            <p class="text-darkblack">
+                
+            </p> 
         </section>
 
         <div class="flex flex-col items-center justify-end w-screen">

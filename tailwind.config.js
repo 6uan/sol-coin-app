@@ -22,6 +22,7 @@ module.exports = {
       'stonegray': '#C0C1B9',
       'sage': '#9fa287',
       'imagegray': '#95A3A6',
+      'darkblack': '#000000',
     },
 
     screens: {
