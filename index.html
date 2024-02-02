@@ -6,100 +6,90 @@
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <link href="output.css" rel="stylesheet" type="text/css">
 </head>
-<body class="bg-softblack">
+<body class="bg-stonegray">
 
-    <div id="home"></div>
+    <a id="home"></a>
 
+    <section class="relative border-2">
 
+        <!-- container for both divs under -->
+        <div class="mx-auto px-10 lg:px-96 -mt-96">
 
-    <!-- DIV CONTAINER -->
-    <div class="mx-auto px-10 lg:px-96 mt-20">
-
-
-    <!-- DIV 1 (tokenomics, lore, analytics)-->
+        <!-- DIV 1 (tokenomics, lore, analytics)-->
         <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-12 items-center">
 
-        <div class="w-full md:min-w-[350px] h-32 bg-stonegray flex items-center justify-center rounded-md">
+            <!-- box for tokenomics -->
+            <div class="w-full md:min-w-[350px] h-32 bg-stonegray flex items-center justify-center rounded-md">
             <a href="#tokenomics" class="text-softblack text-4xl md:text-6xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer mx-2">tokenomics</a> 
-        </div>
-    
-        <div class="w-full md:min-w-[350px] h-32 bg-stonegray flex items-center justify-center rounded-md">
-            <a href="#lore" class="text-softblack text-4xl md:text-7xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer mx-2">lore</a>
-        </div>
-    
-        <div class="w-full md:min-w-[350px] h-32 bg-stonegray flex items-center justify-center rounded-md">
-            <a href="#analytics" class="text-softblack text-4xl md:text-7xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer mx-2">analytics</a>
-        </div>
-    
-        </div>
-    
-    <div class="flex flex-col md:flex-row items-center justify-center bg-stonegray mt-3 gap-4 md:gap-12 py-2">
-        <div class="flex flex-row gap-9 items-center justify-center">
-            <a href="https://web.telegram.org/">
-                <img src="assets/tele-app.png" class="h-10">
-            </a>
-            
-            <a href="https://twitter.com/home">
-                <img src="assets/x-app.png" class="h-10">
-            </a>
-            
-            <a href="https://raydium.io/">
-                <img src="assets/raydium-app.png" class="h-10"> 
-            </a>
-        </div>
-    
-        <!-- Full text for larger screens -->
-        <h1 class="hidden md:block font-bold text-4xl text-softblack font-metropolis ml-14">
-            $Bronco killing the meme game since 1994
-        </h1>
-    
-        <!-- Short text for smaller screens -->
-        <h1 class="block md:hidden font-bold text-2xl text-softblack font-metropolis text-center">
-            $Bronco
-        </h1>
-    </div>
-
-</div>
-    
-
-        <section class="block">
-            <div class="absolute top-0 h-screen w-screen z-[-10] overflow-hidden">
-               <video autoplay muted loop id="carChase" class="w-full">
-                <source src="assets/carchase-compressed.mov" type="video/mp4">
-            </video> 
             </div>
-            
-        </section>
+    
+            <!-- box for lore -->
+            <div class="w-full md:min-w-[350px] h-32 bg-stonegray flex items-center justify-center rounded-md">
+            <a href="#lore" class="text-softblack text-4xl md:text-7xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer mx-2">lore</a>
+            </div>
+    
+            <!-- box for analytics -->
+            <div class="w-full md:min-w-[350px] h-32 bg-stonegray flex items-center justify-center rounded-md">
+            <a href="#analytics" class="text-softblack text-4xl md:text-7xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer mx-2">analytics</a>
+            </div>
+    
+        </div>
 
-        <section class="block" id="tokenomics">
-            <p class="text-white">
-                Tokenomics go here!
-            </p>
+        <!-- DIV 2 (socials and caption)-->
+        <div class="flex flex-col md:flex-row items-center justify-center bg-stonegray mt-3 gap-4 md:gap-12 py-2">
+
+            <!-- box for socials-->
+            <div class="flex flex-row gap-9 items-center justify-center">
+                <a href="https://web.telegram.org/">
+                    <img src="assets/tele-app.png" class="h-10">
+                </a>
             
+                <a href="https://twitter.com/home">
+                    <img src="assets/x-app.png" class="h-10">
+                </a>
+            
+                <a href="https://raydium.io/">
+                    <img src="assets/raydium-app.png" class="h-10"> 
+                </a>
+            </div>
+    
+            <!-- Full text for larger screens -->
+            <h1 class="hidden md:block font-bold text-4xl text-softblack font-metropolis ml-14">$Bronco killing the meme game since 1994</h1>
+    
+            <!-- Short text for smaller screens -->
+            <h1 class="block md:hidden font-bold text-2xl text-softblack font-metropolis text-center">$Bronco</h1>
+        </div>
+        </div>
+
+        <!-- video background -->
+        <div class="absolute top-0 h-screen w-screen z-[-10] overflow-hidden">
+            <video autoplay muted loop id="carChase" class="w-full h-full object-cover">
+            <source src="assets/carchase-compressed.mov" type="video/mp4">
+            </video> 
+        </div>
+            
+    </section>
+
+        <section class="flex border-2" id="tokenomics">
             <img src="assets/hodl.png" class="h-96">
+            <p class="text-white">Tokenomics go here!</p>
         </section>
 
-        <section class="block" id="lore">
-            <p class="text-white">
-                Lore goes here!
-            </p>
-            
+        <section class="flex border-2" id="lore">
+            <p class="text-white">Lore goes here!</p>
             <img src="assets/cryptocar.png" class="h-96">
         </section>
 
-        <section class="block" id="analytics">
-            <p class="text-white">
-                Lore goes here!
-            </p>
-
+        <section class="flex border-2" id="analytics">
             <img src="assets/tothemoon.png" class="h-96">
+            <p class="text-white">Lore goes here!</p> 
         </section>
 
-        <a href="#home" class="absolute">
-            <img src="assets/arrowup.png" class="h-12">
-        </a>
-        
-
+        <div class="flex flex-col items-center justify-end w-screen">
+            <a href="#home" class="hover:cursor-pointer">
+                <img src="assets/arrowup.png" class="h-12">
+            </a>
+        </div>
   
 <script src="script.js"></script>
 </body>
