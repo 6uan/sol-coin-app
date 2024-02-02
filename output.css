@@ -941,6 +941,10 @@ select {
   margin-top: -24rem;
 }
 
+.mt-36 {
+  margin-top: 9rem;
+}
+
 .block {
   display: block;
 }
@@ -1374,6 +1378,14 @@ html, body {
 }
 
 @media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:min-w-\[350px\] {
     min-width: 350px;
   }
@@ -1397,6 +1409,43 @@ html, body {
   }
 
   .lg\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:block {
+    display: block;
+  }
+
+  .xl\:hidden {
+    display: none;
+  }
+
+  .xl\:min-w-\[350px\] {
+    min-width: 350px;
+  }
+
+  .xl\:flex-row {
+    flex-direction: row;
+  }
+
+  .xl\:gap-12 {
+    gap: 3rem;
+  }
+
+  .xl\:px-96 {
+    padding-left: 24rem;
+    padding-right: 24rem;
+  }
+
+  .xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .xl\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
   }
