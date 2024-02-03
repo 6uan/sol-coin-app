@@ -44,3 +44,13 @@ html, body {
   ::-webkit-scrollbar-thumb:hover {
     background: white; 
   }
+
+  @media (min-width: 1280px) {
+    .desktop-only { display: block; }
+    .mobile-only { display: none; }
+  }
+  
+  @media (max-width: 1280px) {
+    .desktop-only { display: none; }
+    .mobile-only { display: block; }
+  }
