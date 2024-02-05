@@ -1,6 +1,6 @@
 
 
-const TOKEN_URL = 'https://api.dexscreener.com/latest/dex/tokens/Ek1zzALu4d4iPu7bwUL1TU4aCwNokecihX6y6aBEo6b4';
+const TOKEN_URL = 'https://api.dexscreener.com/latest/dex/tokens/JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN';
 const tokenomicsContainter = document.getElementById("tokenomicsContainer");
 
 

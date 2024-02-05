@@ -13,30 +13,30 @@
     <section>
 
         <!-- container for both divs under -->
-        <div class=" xl:px-32 xl:pb-96 pt-10 overflow-hidden">
+        <div class=" xl:px-32 xl:pb-96 pt-10 z-10">
 
         <!-- DIV 1 (tokenomics, lore, analytics)-->
         <div class="flex flex-col xl:flex-row justify-center gap-4 xl:gap-12 items-center">
 
             <!-- box for tokenomics -->
-        <div class="w-full h-32 bg-stonegray flex items-center justify-center rounded-md shadow-softblack shadow-lg z-10">
+        <div class="w-full h-32 bg-stonegray flex items-center justify-center rounded-md shadow-softblack shadow-lg">
             <a href="#tokenomics" class="text-softblack text-4xl xl:text-6xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer mx-2">tokenomics</a> 
             </div>
     
             <!-- box for lore -->
-            <div class="w-full xl:min-w-[350px] h-32 bg-stonegray flex items-center justify-center rounded-md shadow-softblack shadow-lg z-10">
+            <div class="w-full xl:min-w-[350px] h-32 bg-stonegray flex items-center justify-center rounded-md shadow-softblack shadow-lg">
             <a href="#lore" class="text-softblack text-4xl xl:text-7xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer mx-2">lore</a>
             </div>
     
             <!-- box for analytics -->
-            <div class="w-full xl:min-w-[350px] h-32 bg-stonegray flex items-center justify-center rounded-md shadow-softblack shadow-lg z-10">
+            <div class="w-full xl:min-w-[350px] h-32 bg-stonegray flex items-center justify-center rounded-md shadow-softblack shadow-lg">
             <a href="#analytics" class="text-softblack text-4xl xl:text-7xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer mx-2">analytics</a>
             </div>
     
         </div>
 
         <!-- DIV 2 (socials and caption)-->
-        <div class="flex flex-col xl:flex-row items-center justify-center bg-stonegray mt-5 gap-4 xl:gap-12 py-2 rounded-md shadow-softblack shadow-lg z-10">
+        <div class="flex flex-col xl:flex-row items-center justify-center bg-stonegray mt-5 gap-4 xl:gap-12 py-2 rounded-md shadow-softblack shadow-lg">
 
             <!-- box for socials-->
             <div class="flex flex-row gap-3 xl:gap-9 items-center justify-center pt-4 xl:pt-0">
@@ -77,47 +77,51 @@
     </section>
     <hr>
 
-        <section class="flex bg-stonegray" id="tokenomics">
-            <img src="assets/hodl.png" class="h-96">
-            <p class="font-metropolis text-white">Tokenomics go here!</p>
-            <div id="tokenomicsContainer">
-
-            </div>
+        <section class="grid grid-cols-1 xl:grid-cols-2 justify-items-center xl:justify-items-stretch bg-stonegray" id="tokenomics">
+            <img src="assets/hodl.png" class="object-contain min-w-40 max-h-[600px] px-10">
+            <p class="font-metropolis text-white text-1xl font-semibold text-center">Tokenomics go here!</p>
+            <div id="tokenomicsContainer" class="xl:col-span-2 text-center"></div>
         </section>
         <hr>
-        <section class="flex bg-stonegray px-40" id="lore">
 
-            <img src="assets/cryptocar.png" class="h-96">
-            <div class="flex flex-col mx-10">
-                <h1 class="font-metropolis text-white text-2xl font-semibold text-center">
+        <section class="grid grid-cols-1 xl:grid-cols-2 justify-items-center xl:justify-items-stretch bg-stonegray" id="lore">
+
+            <img src="assets/cryptocar.png" class="object-contain min-w-40 max-h-[600px] px-10">
+
+            <div class="min-w-40">
+                <h1 class="font-metropolis text-white text-1xl font-semibold text-center">
                     🚨 Breaking News: O.J. Simpson Strikes Again! 🚨
                 </h1>
 
-                <p> Reports are pouring in that O.J. Simpson has made a surprising return to the <br>
-                    spotlight, and this time, he's taking on the blockchain! But wait, it gets even wilder... <br>
-                    he's making his getaway in none other than his infamous white Bronco! 🚗💨 <br>
+                <p class="font-metropolis text-white font-light px-20 mt-5"> Reports are pouring in that O.J. Simpson has made a surprising return to the
+                    spotlight, and this time, he's taking on the blockchain! But wait, it gets even wilder...
+                    he's making his getaway in none other than his infamous white Bronco! 🚗💨 
 
-                    Witnesses claim they saw O.J. Simpson calmly sipping a smoothie while casually <br>
-                    shutting down block after block of the blockchain. 😎 Turns out, he's not just an ex-football star; <br>
-                    he's a crypto-savvy guru! Who knew? <br>
+                    Witnesses claim they saw O.J. Simpson calmly sipping a smoothie while casually 
+                    shutting down block after block of the blockchain. 😎 Turns out, he's not just an ex-football star;
+                    he's a crypto-savvy guru! Who knew?
 
-                    As the crypto community scrambles to make sense of it all, one thing's for sure: O.J.'s white Bronco <br>
-                    is the new symbol of decentralized escapades! 🕵️‍♂️💼 <br>  
-                    Stay tuned as this wild ride unfolds. Who knows what other surprises O.J. has <br>
-                     up his sleeve? But hey, at least he's trading in his gloves for keyboard strokes! <br>
-                     ⌨️ #BroncoBandit #CryptoChaos #OJOnTheRun <br>
+                    As the crypto community scrambles to make sense of it all, one thing's for sure: O.J.'s white Bronco
+                    is the new symbol of decentralized escapades! 🕵️‍♂️💼  
+                    Stay tuned as this wild ride unfolds. Who knows what other surprises O.J. has
+                     up his sleeve? But hey, at least he's trading in his gloves for keyboard strokes!
+                     ⌨️ #BroncoBandit #CryptoChaos #OJOnTheRun
                 </p>   
             </div>
+
         </section>
         <hr>
-        <section class="flex bg-stonegray" id="analytics">
-            <img src="assets/tothemoon.png" class="h-96">
-            <p class="font-metropolis text-white">Text goes here!</p> 
+        <section class="grid grid-cols-1 xl:grid-cols-2 justify-items-center xl:justify-items-stretch bg-stonegray" id="analytics">
+
+            <img src="assets/tothemoon.png" class="object-contain min-w-40 px-10 max-h-[600px] xl:row-span-3">
+            <p class="font-metropolis text-white text-4xl px-10">24h Volume:</p>
+            <p class="font-metropolis text-white text-4xl px-10">Holders:</p> 
+            <p class="font-metropolis text-white text-4xl px-10">Marketcap:</p>  
         </section>
 
-        <div class="w-screen bg-softblack">
+        <div class="w-screen h-14 bg-softblack">
             <a href="#home" class="hover:cursor-pointer w-screen flex flex-col items-center justify-center mb-4">
-                <img src="assets/white-arrow.png" class="h-12">
+                <img src="assets/white-arrow.png" class="h-12 mt-1 hover:drop-shadow hover:shadow-white z-10">
             </a>
         </div>
   
