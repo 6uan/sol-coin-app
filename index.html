@@ -6,7 +6,7 @@
     <link href="input.css" rel="stylesheet" type="text/css"/>
     <link href="output.css" rel="stylesheet" type="text/css">
 </head>
-<body class="bg-darkblack">
+<body class="bg-softblack">
 
     <a id="home"></a>
 
@@ -19,7 +19,7 @@
         <div class="flex flex-col xl:flex-row justify-center gap-4 xl:gap-12 items-center">
 
             <!-- box for tokenomics -->
-        <div class="w-full h-32 bg-stonegray flex items-center justify-center rounded-md shadow-softblack shadow-lg">
+            <div class="w-full h-32 bg-stonegray flex items-center justify-center rounded-md shadow-softblack shadow-lg scroll-smooth">
             <a href="#tokenomics" class="text-softblack text-4xl xl:text-6xl font-pixel overflow-hidden hover:text-white hover:cursor-pointer mx-2">tokenomics</a> 
             </div>
     
@@ -77,7 +77,7 @@
     </section>
     <hr>
 
-        <section class="grid grid-cols-1 xl:grid-cols-2 justify-items-center xl:justify-items-stretch bg-stonegray" id="tokenomics">
+        <section class="grid grid-cols-1 xl:grid-cols-2 justify-items-center xl:justify-items-stretch bg-stonegray scroll-smooth" id="tokenomics">
             <img src="assets/hodl.png" class="object-contain min-w-40 max-h-[600px] px-10">
             <p class="font-metropolis text-white text-1xl font-semibold text-center">Tokenomics go here!</p>
             <div id="tokenomicsContainer" class="xl:col-span-2 text-center"></div>
@@ -89,11 +89,11 @@
             <img src="assets/cryptocar.png" class="object-contain min-w-40 max-h-[600px] px-10">
 
             <div class="min-w-40">
-                <h1 class="font-metropolis text-white text-1xl font-semibold text-center">
+                <h1 class="font-metropolis text-white text-1xl font-extrabold text-center">
                     🚨 Breaking News: O.J. Simpson Strikes Again! 🚨
                 </h1>
 
-                <p class="font-metropolis text-white font-light px-20 mt-5"> Reports are pouring in that O.J. Simpson has made a surprising return to the
+                <p class="font-metropolis text-white font-light px-auto mx-5 mt-5 border-2"> Reports are pouring in that O.J. Simpson has made a surprising return to the
                     spotlight, and this time, he's taking on the blockchain! But wait, it gets even wilder...
                     he's making his getaway in none other than his infamous white Bronco! 🚗💨 
 
@@ -111,12 +111,15 @@
 
         </section>
         <hr>
-        <section class="grid grid-cols-1 xl:grid-cols-2 justify-items-center xl:justify-items-stretch bg-stonegray" id="analytics">
+        <section class="grid grid-cols-1 xl:grid-cols-2 content-center gap-10 justify-items-center xl:justify-items-stretch bg-stonegray" id="analytics">
 
-            <img src="assets/tothemoon.png" class="object-contain min-w-40 px-10 max-h-[600px] xl:row-span-3">
-            <p class="font-metropolis text-white text-4xl px-10">24h Volume:</p>
-            <p class="font-metropolis text-white text-4xl px-10">Holders:</p> 
-            <p class="font-metropolis text-white text-4xl px-10">Marketcap:</p>  
+            <img src="assets/tothemoon.png" class="object-contain min-w-40 px-10 max-h-[600px]">
+            <ul id="dataContainer" class="flex flex-col gap-3">
+                <li class="font-metropolis text-white text-4xl border-2 w-80">24h Volume:</li>
+                <li class="font-metropolis text-white text-4xl border-2 w-80">Holders:</li> 
+                <li class="font-metropolis text-white text-4xl border-2 w-80">Marketcap:</li>  
+            </ul>
+            
         </section>
 
         <div class="w-screen h-14 bg-softblack">
