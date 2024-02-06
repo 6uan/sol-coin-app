@@ -1,8 +1,10 @@
 
 
 const TOKEN_URL = 'https://api.dexscreener.com/latest/dex/tokens/JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN';
-const tokenomicsContainter = document.getElementById("tokenomicsContainer");
-const dataContainer = document.getElementById("dataContainer")
+
+const volume = document.getElementById("volumeContainer");
+const holders = document.getElementById("holdersContainer");
+const marketcap = document.getElementById("marketcapContainer");
 
 async function getToken(){
     const response = await fetch(TOKEN_URL);
@@ -11,6 +13,41 @@ async function getToken(){
 }
 
 getToken();
+
+const ctx = document.getElementById('tokenAllocationChart').getContext('2d');
+const tokenAllocationChart = new Chart(ctx, {
+    type: 'pie', // Defines chart type
+    data: {
+      labels: ['Presale', 'Public', 'Team'], // Replace with your actual data labels
+      datasets: [{
+        label: 'Token Allocation',
+        data: [10, 20, 30], // Replace with your actual data values
+        backgroundColor: [ // Add more colors for each segment
+          'rgba(140, 114, 127, 0.2)',
+          'rgba(89, 114, 127, 0.2)',
+          'rgba(109, 103, 88, 0.2)',
+        ],
+        borderColor: [ // Border colors for each segment
+          'rgba(140, 114, 127, 1)',
+          'rgba(89, 114, 127, 1)',
+          'rgba(109, 103, 88, 1)',
+        ],
+        borderWidth: 3
+      }]
+    },
+    options: {
+      responsive: true, // Ensures the chart is responsive
+      plugins: {
+        legend: {
+          position: 'center', // Adjusts the legend position
+        },
+        title: {
+          display: true,
+          text: 'Token Allocation Breakdown' // Chart title
+        }
+      }
+    }
+  });
 
 /*
 fetch(TOKEN_URL)
