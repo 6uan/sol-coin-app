@@ -54,10 +54,10 @@
             </div>
     
             <!-- Full text for larger screens -->
-            <h1 class="hidden xl:block font-bold text-4xl text-softblack font-metropolis min-w-96">$Bronco killing the game since 1994</h1>
+            <h1 class="hidden xl:block font-bold text-4xl text-softblack font-faustina mb-1 min-w-96 ">$BRONCO KILLING THE MEME GAME SINCE 1994</h1>
     
             <!-- Short text for smaller screens -->
-            <h1 class="block xl:hidden font-bold text-2xl text-softblack font-metropolis text-center">$Bronco</h1>
+            <h1 class="block xl:hidden font-bold text-4xl text-softblack font-faustina mb-1 text-center">$BRONCO</h1>
         </div>
         </div>
 
@@ -78,13 +78,15 @@
     <hr>
 
         <!-- secion for tokenomics -->
-        <section class="grid grid-cols-1 h-auto lg:grid-cols-2 justify-items-center lg:justify-items-stretch items-stretch bg-stonegray scroll-smooth" id="tokenomics">
+        <section class="relative grid grid-cols-1 h-auto lg:grid-cols-2 justify-items-center lg:justify-items-stretch items-stretch bg-sand -z-20 scroll-smooth" id="tokenomics">
 
-            <img src="assets/hodl.png" class="object-cover w-auto lg:h-screen">
-            <div class="text-center h-auto w-screen my-auto lg:w-auto border-2">
-                <div id="tokenomicsContainer" >
+            <img src="assets/carsafe.png" class="object-cover w-full lg:h-screen">
+            <div class="text-center h-auto w-screen my-auto lg:w-auto">
+                <div class="absolute h-full w-full overflow-hidden"></div>
+                <div id="tokenomicsContainer" class="mb-5">
                 <canvas id="tokenAllocationChart"></canvas>
                 </div>
+                <img src="assets/noise-light.png" class="absolute top-0 right-0 h-screen object-contain -z-10 opacity-50">
             </div>
             
 
@@ -93,13 +95,13 @@
 
 
         <!-- section for lore -->
-        <section class="grid grid-cols-1 h-auto lg:grid-cols-2 justify-items-center lg:justify-items-stretch items-stretch bg-stonegray" id="lore">
+        <section class="relative grid grid-cols-1 h-auto lg:grid-cols-2 justify-items-center lg:justify-items-stretch items-stretch bg-sand -z-20" id="lore">
 
-            <div class="text-center h-auto w-screen my-auto lg:w-auto border-2">
-                <h1 class="font-metropolis text-white text-4xl font-extrabold text-center">🚨Breaking News🚨<br></h1>
-                <h2 class="font-metropolis text-white text-2xl font-light text-center"> O.J. Simpson Strikes Again!</h2>
+            <div class="text-center h-auto w-screen my-auto lg:w-auto">
+                <h1 class="font-faustina font-bolder text-newspaper text-4xl lg:text-6xl/[90px] text-center">🚨Breaking News🚨<br></h1>
+                <h2 class="font-metropolis text-newspaper text-3xl font-light text-center"> O.J. Simpson Strikes Again!</h2>
 
-                <p class="font-metropolis text-white font-bold"> Reports are pouring in that O.J. Simpson has made a surprising return to the
+                <p class="font-faustina text-2xl/10 text-newspaper lg:px-5 xl:px-16 lg:min-w-32 lg:mt-2 text-justify"> Reports are pouring in that O.J. Simpson has made a surprising return to the
                     spotlight, and this time, he's taking on the blockchain! But wait, it gets even wilder...
                     he's making his getaway in none other than his infamous white Bronco! 🚗💨 
 
@@ -111,8 +113,11 @@
                     is the new symbol of decentralized escapades! 🕵️‍♂️💼  
                     Stay tuned as this wild ride unfolds. Who knows what other surprises O.J. has
                      up his sleeve? But hey, at least he's trading in his gloves for keyboard strokes!
-                     ⌨️ #BroncoBandit #CryptoChaos #OJOnTheRun
+                     ⌨️ 
                 </p>   
+                <br><br>
+                <p class="font-metropolis text-newspaper text-2xl font-light text-center"> #BroncoBandit #CryptoChaos #OJOnTheRun </p>
+                <img src="assets/noise-light.png" class="absolute top-0 h-screen object-contain -z-10 opacity-50">
             </div>
 
             <img src="assets/cryptocar.png" class="object-cover w-auto lg:h-screen">
@@ -121,17 +126,28 @@
         <hr>
 
         <!-- section for analytics-->
-        <section class="grid grid-cols-1 h-auto lg:grid-cols-2 justify-items-center lg:justify-items-stretch items-stretch bg-stonegray scroll-smooth" id="analytics">
+        <section class="relative grid grid-rows-1 h-auto lg:grid-cols-2 justify-items-center lg:justify-items-stretch items-stretch bg-sand scroll-smooth -z-20" id="analytics">
 
             <img src="assets/tothemoon.png" class="object-cover w-auto lg:h-screen">
-            <ul id="dataContainer" class="text-center h-auto w-screen my-auto lg:w-auto border-2">
-                <li class="font-metropolis text-white text-6xl w-auto">24h Volume:</li>
-                <span class="text-7xl font-light" id="volumeContainer">$ HERE</span>
-                <li class="font-metropolis text-white text-7xl w-auto">Holders:</li>
-                <span class="text-7xl font-thin" id="holdersContainer">$ HERE</span>
-                <li class="font-metropolis text-white text-6xl w-auto">Marketcap:</li> 
-                <span class="text-7xl font-thin" id="marketcapContainer">$ HERE</span> 
+
+            <ul id="dataContainer" class="text-center h-auto w-screen my-auto lg:w-auto">
+                
+                <li class="font-faustina text-newspaper text-6xl lg:text-9xl w-auto">MARKETCAP</li>
+                
+                    <span class="font-faustina text-5xl lg:text-7xl xl:text-8xl font-bolder" id="market"></span>
+                
+                <li class="font-faustina text-newspaper text-6xl lg:text-9xl w-auto">24H VOLUME</li>
+                
+                    <span class="font-faustina text-5xl lg:text-7xl xl:text-8xl font-bolder" id="volume"></span>
+                
+                <li class="font-faustina text-newspaper text-6xl lg:text-9xl w-auto">24H PRICE</li> 
+                
+                    <span class="font-faustina text-5xl lg:text-7xl xl:text-8xl font-thin" id="price"></span> 
+            
+                    <p class="mt-5 font-metropolis text-newspaper text-2xl font-light text-center"> DATA FROM DEXSCREENER</p>
+
             </ul>
+            <img src="assets/noise-light.png" class="absolute top-0 right-0 h-screen object-contain -z-10 opacity-50">
             
         </section>
 

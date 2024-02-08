@@ -6,6 +6,31 @@
     font-family: "pixel";
     src: url("assets/pixel.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Faustina";
+  font-weight: bolder;
+  src: url("assets/Faustina-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Faustina";
+  font-weight: bold;
+  src: url("assets/Faustina-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Faustina";
+  src: url("assets/Faustina-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Faustina";
+  src: url("assets/Faustina-SemiBold.ttf");
+}
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Mooli&family=Ubuntu:wght@300;400;500;700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/metropolis-2');
 
@@ -23,6 +48,7 @@ section {
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* width */

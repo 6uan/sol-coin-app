@@ -2,90 +2,82 @@
 
 const TOKEN_URL = 'https://api.dexscreener.com/latest/dex/tokens/JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN';
 
-const volume = document.getElementById("volumeContainer");
-const holders = document.getElementById("holdersContainer");
-const marketcap = document.getElementById("marketcapContainer");
+const volumeElement = document.getElementById("volume");
+const marketElement = document.getElementById("market");
+const priceElement = document.getElementById("price");
 
 async function getToken(){
-    const response = await fetch(TOKEN_URL);
-    const data = await response.json();
-    console.log(data);
+    try {
+        const response = await fetch(TOKEN_URL);
+        const data = await response.json();
+
+        // Assuming data structure has these paths - adjust according to actual response
+        const marketCap = data.pairs[0].fdv; // Example path
+        const volume24h = data.pairs[0].volume.h24; // Example path
+        const price = data.pairs[0].priceChange.h24; // Example path
+
+        // Update HTML content
+        marketElement.textContent = `$ ${marketCap.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+        volumeElement.textContent = `$ ${volume24h.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+        priceElement.textContent = `$ ${price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    } catch (error) {
+        console.error("Failed to fetch token data:", error);
+    }
 }
 
+// Call the function to update the data on page load
 getToken();
 
 const ctx = document.getElementById('tokenAllocationChart').getContext('2d');
 const tokenAllocationChart = new Chart(ctx, {
-    type: 'pie', // Defines chart type
+    type: 'pie',
     data: {
-      labels: ['Presale', 'Public', 'Team'], // Replace with your actual data labels
+      labels: ['Ecosystem', 'Presale', 'Team', 'Treasury'],
       datasets: [{
         label: 'Token Allocation',
-        data: [10, 20, 30], // Replace with your actual data values
-        backgroundColor: [ // Add more colors for each segment
-          'rgba(140, 114, 127, 0.2)',
-          'rgba(89, 114, 127, 0.2)',
-          'rgba(109, 103, 88, 0.2)',
+        data: [80, 10, 5, 5],
+        backgroundColor: [
+          '#8c727f', // Adjust colors to match your site
+          '#59727f',
+          '#6d6758',
+          '#817126',
         ],
-        borderColor: [ // Border colors for each segment
-          'rgba(140, 114, 127, 1)',
-          'rgba(89, 114, 127, 1)',
-          'rgba(109, 103, 88, 1)',
+        borderColor: [
+          '#8c727f',
+          '#59727f',
+          '#6d6758',
+          '#817126',
         ],
-        borderWidth: 3
+        borderWidth: 1 // Adjusted for subtler borders
       }]
     },
     options: {
-      responsive: true, // Ensures the chart is responsive
+      responsive: true,
+      maintainAspectRatio: false, // This can help with controlling the chart size
       plugins: {
         legend: {
-          position: 'center', // Adjusts the legend position
+          position: 'top', // Adjusted for better visibility
+          labels: {
+            color: '#4b3d30', // Example: '#333333', adjust to match your site's font color
+            padding: 5, // Adjust padding
+            font: {
+                size: 15, // Example size
+                family: "Faustina", // Ensure the font family matches exactly
+                weight: "bolder",
+            },
+          },
         },
         title: {
           display: true,
-          text: 'Token Allocation Breakdown' // Chart title
+          text: 'Token Allocation Breakdown',
+          color: '#4b3d30', // Example: '#333333', adjust to match your site's title color
+          font: {
+            size: 35, // Example size
+            family: "Faustina", // Ensure the font family matches exactly
+            weight: "bolder",
+          },
         }
       }
     }
   });
 
-/*
-fetch(TOKEN_URL)
-    .then(response => response.json())
-    .then(responseJson => {
-        // Assuming you want to iterate over the "pairs" array in the response
-
-        let div = document.createElement('div');
-        let liData = document.createElement('div'); 
-
-        for (let pair of responseJson.pairs) {
-
-
-            liData.innerHTML = `
-            <li> 24h Volume: ${pair.volume.h4.toLocaleString('en-US')}</li>
-            <li class="font-metropolis text-white text-4xl border-2 w-80">Holders: PLACEHOLDER</li> 
-            <li class="font-metropolis text-white text-4xl border-2 w-80">Marketcap: ${pair.fdv.toLocaleString('en-US')}</li> 
-            `
-
-            
-
-            div.innerHTML = ` this is a test token name is ${pair.baseToken.symbol} <br>
-            and the market cap is ${pair.fdv.toLocaleString('en-US')}`
-
-            console.log(pair.baseToken.name);
-            console.log(pair.baseToken.symbol);
-            console.log(pair.fdv); 
-            
-            // For example, logging the name of the base token
-            // You can similarly access other properties of each pair object
-            // e.g., pair.quoteToken.name, pair.priceUsd, etc.
-        }
-
-        tokenomicsContainter.append(div);
-        dataContainer.append(liData);
-        // You can add more logic here to display or use the data as needed
-    })
-    .catch(error => {
-        console.error('Error fetching data: ', error);
-    });
-*/

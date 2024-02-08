@@ -10,6 +10,7 @@ module.exports = {
       'ubuntu': ['Ubuntu', 'sans-serif'],
       'metropolis': ['Metropolis', 'sans-serif'],
       'pixels': ['pixels', 'sans'],
+      'faustina': ['Faustina', 'sans'],
     },
 
     colors: {
@@ -23,6 +24,8 @@ module.exports = {
       'sage': '#9fa287',
       'imagegray': '#95A3A6',
       'darkblack': '#000000',
+      'newspaper': '#4b3d30',
+      'sand': '#ccbdaa',
     },
 
     screens: {
