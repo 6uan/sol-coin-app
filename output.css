@@ -915,6 +915,14 @@ select {
   height: 100vh;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
+.h-\[500px\] {
+  height: 500px;
+}
+
 .w-auto {
   width: auto;
 }
@@ -981,6 +989,10 @@ select {
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.self-center {
+  align-self: center;
 }
 
 .overflow-hidden {
@@ -1307,6 +1319,11 @@ html, body {
 
   .lg\:row-span-2 {
     grid-row: span 2 / span 2;
+  }
+
+  .lg\:my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .lg\:mb-5 {
